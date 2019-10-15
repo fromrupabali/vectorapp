@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
-     const shop = sequelize.define(
-       "logo",
+     const Logo = sequelize.define(
+       "Logo",
        {
          id: {
            type: DataTypes.INTEGER,
@@ -35,9 +36,9 @@ module.exports = (sequelize, DataTypes) => {
        },
        {}
      );
-     logo.associate = function(models) {
-       logo.belongsTo(models.user);
+     Logo.associate = function(models) {
+       Logo.belongsTo(models.User);
      }; 
 
-     return logo;
+     return Logo;
 }

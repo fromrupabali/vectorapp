@@ -18,6 +18,16 @@ exports.create_logo = async(req, res, next) => {
     }
 }
 
+exports.get_all_logos = async(req, res, next) => {
+    try {
+        const logos = await Logo.findAll();
+        res.status(200).json({
+            logos
+        })
+    } catch (error) {
+        throw error;
+    }
+}
 exports.get_logos = async(req, res, next) => {
     try {
         const logos = await Logo.findAll({

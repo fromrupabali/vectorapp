@@ -8,7 +8,7 @@ const app = express();
 //DB conncetion
 require('./api/database/connection');
 require('./api/services/passport');
-require('./models/index');
+
 const userRoutes = require("./api/routes/users");
 const logoRoutes = require('./api/routes/logos');
 

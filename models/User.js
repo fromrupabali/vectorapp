@@ -1,6 +1,8 @@
+const Sequelize = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
-  const user = sequelize.define(
-    "user",
+  const User = sequelize.define(
+    "User",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -31,10 +33,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING
       },
       facebookId: {
-        type: SDataTypes.STRING
+        type: DataTypes.STRING
       }
     },
     {}
   );
-  return user;
+  return User;
 }
